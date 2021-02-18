@@ -13,7 +13,7 @@ _setup:
 	# Install weave plugin (if not exists)
 	@(docker plugin ls | grep weave) >/dev/null || ( \
 		docker plugin install --grant-all-permissions --disable --alias weave weaveworks/net-plugin:latest_release \
-		&& docker plugin set weave IPALLOC_RANGE=169.254.0.0/16 \
+		&& docker plugin set weave IPALLOC_RANGE=10.32.0.0/12 \
 		&& docker plugin set weave WEAVE_MULTICAST=1 \
 		&& docker plugin set weave WEAVE_PASSWORD=S3Cr3t! \
 		&& docker plugin enable weave)
