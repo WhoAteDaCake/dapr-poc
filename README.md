@@ -1,5 +1,9 @@
 # Dapr PoC
 
+## IP setup
+
+You might need to modify `IPALLOC_RANGE` value to `IPALLOC_RANGE=10.32.0.0/12` within Makefile. More can be found [here](https://www.weave.works/docs/net/latest/tasks/ipam/configuring-weave/)
+
 ## Deploy stack
 
 `make deploy-docker-swarm` or `make deploy-docker-compose`
